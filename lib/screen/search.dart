@@ -3,6 +3,8 @@ import 'package:sellbag/widget/common_widget.dart';
 import 'package:sellbag/global_data.dart';
 import 'package:sellbag/model/item.dart';
 
+import '../data/list_data.dart';
+
 class Search extends StatefulWidget {
   @override
   _SearchState createState() => _SearchState();
@@ -12,8 +14,10 @@ class _SearchState extends State<Search> {
   List<CategoriesData> data = [];
   @override
   void initState() {
-    CommonWidget.categories();
     super.initState();
+    setState(() {
+      data = categorieslistdata;
+    });
   }
 
   @override

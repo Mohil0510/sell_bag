@@ -4,7 +4,6 @@ import 'package:sellbag/global_data.dart';
 import 'package:sellbag/model/item.dart';
 import 'package:sellbag/screen/search.dart';
 
-
 class CommonWidget {
   ///***********************************Drawer*************************************/
   static Widget drawer({
@@ -181,7 +180,8 @@ class CommonWidget {
       ),
     );
   }
-///*************************************Categories****************************************/
+
+  ///*************************************Categories****************************************/
   static Widget categories({
     CategoriesData categoriesdata,
   }) {
@@ -209,7 +209,7 @@ class CommonWidget {
                 ),
                 image: DecorationImage(
                   image: Svg(
-                    '${categoriesdata.image}',
+                    '${categoriesdata?.image}',
                     color: GlobalData.whitetexcolor,
                   ),
                   scale: 2,

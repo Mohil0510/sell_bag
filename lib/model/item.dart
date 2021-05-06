@@ -7,5 +7,3 @@ class CategoriesData {
     this.image,
   });
 }
-
-
