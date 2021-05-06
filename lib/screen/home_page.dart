@@ -12,7 +12,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
   List<int> list = [0, 1, 2, 3, 4, 5];
-  CategoriesData data = CategoriesData(name: "Jay", image: "url");
 
   @override
   Widget build(BuildContext context) {
@@ -63,15 +62,10 @@ class _HomePageState extends State<HomePage> {
                       ))
                   .toList(),
             ),
-            display(data),
           ],
         ),
       ),
       drawer: CommonWidget.drawer(context: context),
     );
-  }
-
-  display(CategoriesData data) {
-    return Text("${data.name} ${data.image}");
   }
 }
